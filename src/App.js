@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import React  from 'react';
 import './App.css';
+import Profil from './profil/Profil';
+
 
 function App() {
+  const handleName=(name)=>alert(name) //function props
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profil fullname="wafa rtibi" bio="welcome in my profil" profession="web developer" handle={handleName}>
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/user-profile-2871145-2384395.png" alt="picture"></img>
+        </Profil>
+      
     </div>
   );
 }
